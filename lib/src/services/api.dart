@@ -28,7 +28,7 @@ class Api {
         webUrl: url,
       ).url();
 
-      var _result = await http.post(_url);
+      var _result = await http.post(Uri.parse(_url));
 
       if (_result.statusCode == 200) {
         var _response = _checkApiMessageError(_result.body);
